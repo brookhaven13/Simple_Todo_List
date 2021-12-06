@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+i {
+    pointer-events: none;
+}
+
+body {
+    background: linear-gradient(90deg, #cfd9df 0%, #e2ebf0 100%);
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+        color: #273c75;
+        font-size: 3rem;
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input, button {
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.2rem;
+        margin: 0.15rem;
+    }
+
+    input[type="number"] {
+        text-align: center;
+        width: 50px;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    button {
+        cursor: pointer;
+        color: #fff;
+        background-color: #273c75;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div.todo {
+        width: 30vw;
+        display: flex;
+        align-items: center;  
+        margin: 0.2rem 0rem;  
+        transition: all 0.2s;    
+
+        p {
+            padding: 0.25rem 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        p.todo-text {
+            color: #273c75;
+            background-color: #fff;
+            width: 60%;
+        }
+        p.todo-time {
+            color: #e3f6f5;
+            background-color: #272643;
+            width: 20%;
+            text-align: center;
+        }
+
+        button {
+            padding: 0.25rem 0.5rem;
+            font-size: 1.25rem;
+            border: 0rem;
+            cursor: pointer;
+        }
+
+        button.complete {
+            color: #74b969;
+            background-color: #dfffdb;
+        }
+        button.trash {
+            color:#e67793;
+            background-color: #FFF0F4;
+        }
+    }    
+}
+
+div.sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        cursor: pointer;
+        color: #fff;
+        background-color: #273c75;
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+.done {
+    opacity: 0.7;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.15rem;
+    text-decoration-color: #272643;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
